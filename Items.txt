@@ -1,0 +1,13 @@
+Juice 15
+Blade 20
+Chair 0
+Key 50
+Thorn -10
+Banana 40
+Cardboard 0
+Girl -100
+Shoes 50
+Gloves 10
+Bomb -100
+Enemy -100
+Car 50
