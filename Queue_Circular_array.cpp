@@ -1,8 +1,10 @@
 #include <iostream>
 
+#define MAX_SIZE 10
+
 using namespace std;
 
-int A[10];
+int A[MAX_SIZE];
 int front = -1;
 int rear = -1;
 
@@ -14,7 +16,7 @@ bool isEmpty(){
 }
 
 bool isFull(){
-	if(rear == sizeof(A)/sizeof(A[0]) - 1)
+	if(front == (rear + 1)%MAX_SIZE)
 	return true;
 	else
 	return false;
@@ -31,7 +33,7 @@ void enQueue(int x){
 	}
 
 	else{
-	rear++;
+	rear = (rear + 1)%MAX_SIZE;
 	A[rear] = x;
 	}
 }
@@ -48,20 +50,34 @@ void deQueue(){
 
 	else{
 	cout << A[front] << endl;
-	front++;	
+	front = (front + 1)%MAX_SIZE;	
 	}
+}
 
+int front1(){
+	if(front == -1)
+	cout << "Array is empty" << endl;
+	else
+	return A[front];
 }
 
 int main(){
-	enQueue(1);
-	enQueue(2);
-	enQueue(3);
-	enQueue(4);
-	for(int i = 0 ; i < 4 ; i++)
-	cout << A[i] << endl;
+	for(int i = 0; i < MAX_SIZE; i++)
+	enQueue(i);
+	
+	for(int i = 0 ; i < MAX_SIZE ; i++)
+	cout << A[i] << " ";
+	cout << endl;
+	cout << isFull()<< endl;
 	deQueue(); 
+	enQueue(10);
+
+	for(int i = 0 ; i < MAX_SIZE ; i++)
+	cout << A[i] << " ";
+	cout << endl;
+
 	cout << isEmpty() << endl;
 	cout << isFull()<< endl;
 	return 0;
 }
+
