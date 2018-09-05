@@ -12,19 +12,21 @@ template <class T, class Y>
 		: first(x), second(y)
 		{}		
 		
-		T larger();
+		T larger(){
+		return(first>=second?first:second);
+	}
 
 };
 
-template <class T, class Y>
+/*template <class T, class Y>
 T Bigger<T, Y>::larger(){
 		return (first>second?first:second);
-} 
+} */
 
 
 int main(){
 
-	Bigger<int, int> Check(121.21, 20.21);
+	Bigger<float, int> Check(121.21, 20.21);
 	cout << Check.larger() << endl;;
 
 

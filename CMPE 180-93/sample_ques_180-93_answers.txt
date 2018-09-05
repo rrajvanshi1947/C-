@@ -1,0 +1,25 @@
+1.T & func(T &a, T &b)
+2. string c=myfunc()
+3. 
+template<class T>
+4. malloc
+5. 1. O(n2)   2.o(n3)
+6. int &func(int n)
+   {
+	int x = n;
+	int arr[x];
+	int &p = &arr;
+	for(int i=0; i<x; i++)
+	{
+		arr[i] = i;
+	}
+   return p;
+   }
+	value - i ... 0,1,2,3,4,5
+	}
+7. Multiple inheritance
+
+
+
+
+

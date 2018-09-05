@@ -16,8 +16,8 @@ class Constant
 
 	
 		
-		friend void callConstant(Constant &a){
-		a.printSth();
+		friend void callConstant(const Constant* a){
+		(*a).printSth();
 		
 		
 	}
@@ -27,10 +27,11 @@ class Constant
 
 int main() {
 
-	Constant a;
+	const Constant a;
 	a.printSth();
+
 	
-	callConstant(a);
+	callConstant(&a);
 
 
 

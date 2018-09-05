@@ -10,7 +10,7 @@ void bubbleSort(int A[], int n){
 	for(int j = 0; j < n-i-1; j++){
 
 	if(A[j] > A[j+1]){
-	swap(A[j], A[j+1]);
+	swap(&A[j], &A[j+1]);
 	flag = 1;
 	}
 	

@@ -17,6 +17,7 @@ long *raj2 = &raj[2];
 cout << raj0 << endl;
 cout << raj1 << endl;
 cout << raj2 << endl;
+cout << &raj0 << endl;
 raj0 += 1;
 cout << raj0 << endl;
 *raj0 += 1;
@@ -27,7 +28,7 @@ int *pointer = &a;
 cout << pointer << endl;	
 cout << *pointer << endl;
 
-
+cout << &b << endl;
 
 cout << changeValue(a) << endl;
 cout << changeValue2(&b) << endl;
@@ -35,6 +36,8 @@ cout << changeValue2(&b) << endl;
 cout << a << endl;
 cout << b << endl;
 
+cout << &a << endl;
+cout << &b << endl;
 
 
 return 0;

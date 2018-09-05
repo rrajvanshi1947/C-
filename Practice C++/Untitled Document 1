@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+enum Seasons{
+	Spring, Summer, Autumn, Winters
+};
+
+int main(){
+	Seasons first = Seasons Autumn;
+
+	cout << first << endl;
+
+	int i = first;
+	cout << i << endl;
+
+	first = static_cast<int>(i);
+	cout << first << endl;
+
+	return 0;
+}
+

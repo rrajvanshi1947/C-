@@ -26,6 +26,9 @@ cout << endl;
 
 }
 
+/*string a = "asd", b = "asdf";
+cout<<max(a,b)<<min(a,b)<<endl;*/
+
 
 return 0;
 }
